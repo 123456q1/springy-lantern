@@ -1,0 +1,36 @@
+plugins {
+    id 'fabric-loom' version '1.3.8' // 根据你的环境调整版本
+    id 'maven-publish'
+    id 'java'
+}
+
+group = 'com.springy'
+version = '1.0.0'
+archivesBaseName = 'springylantern'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabricmc.net/' }
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.1"
+    mappings "net.fabricmc:yarn:1.21.1+build.1:v2" // 可能需要调整具体 mappings 字符串
+    modImplementation "net.fabricmc:fabric-loader:0.17.0" // 根据需要调整
+    // 如果你需要 Fabric API 可加下面一行（并调整版本）
+    // modImplementation "net.fabricmc.fabric-api:fabric-api:0.87.0+1.21.1"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+loom {
+    // 默认配置，必要时在这里加入 extraMains 或 mixinConfig
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

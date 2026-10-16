@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "springylantern",
+  "version": "1.0.0",
+  "name": "Springy Lantern",
+  "description": "一个会弹人的会发光的方块（示例 Fabric 1.21.1 mod）",
+  "authors": [
+    "Copilot"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.springy.springylantern.SpringyLanternMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.17.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21"
+  }
+}

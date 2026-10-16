@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=false": { "model": "springylantern:block/springy_lantern" },
+    "lit=true":  { "model": "springylantern:block/springy_lantern_lit" }
+  }
+}
